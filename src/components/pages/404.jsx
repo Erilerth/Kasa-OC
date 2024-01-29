@@ -1,11 +1,13 @@
 import Header from '../shared/Header';
+import Footer from '../shared/Footer';
 
 function Page404() {
   return (
-    <div>
+    <>
       <Header />
       <p>404</p>
-    </div>
+      <Footer />
+    </>
   );
 }
 

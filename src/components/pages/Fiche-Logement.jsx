@@ -1,11 +1,13 @@
 import Header from '../shared/Header';
+import Footer from '../shared/Footer';
 
 function FicheLogement() {
   return (
-    <div>
+    <>
       <Header />
       <p>Fiche-Logement</p>
-    </div>
+      <Footer />
+    </>
   );
 }
 

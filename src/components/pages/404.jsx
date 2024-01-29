@@ -1,5 +1,12 @@
+import Header from '../shared/Header';
+
 function Page404() {
-  return <div>404</div>;
+  return (
+    <div>
+      <Header />
+      <p>404</p>
+    </div>
+  );
 }
 
 export default Page404;

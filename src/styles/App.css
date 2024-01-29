@@ -62,8 +62,37 @@ a {
   text-decoration: none;
 }
 
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 27px;
+  width: 100%;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+
+li {
+  font-size: 12px;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
+}
+
+#root {
+  max-width: 1240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 0 20px;
 }
 
 /*# sourceMappingURL=App.css.map */

@@ -1,0 +1,19 @@
+@use '../sass-utils/sass-utils.scss' as utils;
+
+header {
+  @include utils.flex_row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 27px;
+  width: 100%;
+}
+
+ul {
+  @include utils.flex_row;
+  gap: 1.5rem;
+}
+
+li {
+  font-size: 12px;
+}

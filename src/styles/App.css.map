@@ -1,12 +1,1 @@
-{
-  "version": 3,
-  "sourceRoot": "",
-  "sources": [
-    "sass/base/_reset.scss",
-    "sass/style.scss",
-    "sass/sass-utils/_variables.scss"
-  ],
-  "names": [],
-  "mappings": "AAAA;AAAA;AAAA;AAAA;AAKA;EACE;EACA;;;AAGF;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;EAaC;EACA;EACA;EACA;EACA;EACA;;;AAGD;AACA;AAAA;EAEC;;;AAGD;EACC;;;AAGD;EACC;;;AAGD;EACC;;;AAGD;AAAA;EAEC;EACA;;;AAGD;EACC;EACA;;;AAGD;EACE;EACA;;;AC3DF;EACE,aCJU",
-  "file": "App.css"
-}
+{"version":3,"sourceRoot":"","sources":["sass/base/_reset.scss","sass/components/_header.scss","sass/sass-utils/_mixins.scss","sass/style.scss","sass/sass-utils/_variables.scss"],"names":[],"mappings":"AAAA;AAAA;AAAA;AAAA;AAKA;EACE;EACA;;;AAGF;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;EAaC;EACA;EACA;EACA;EACA;EACA;;;AAGD;AACA;AAAA;EAEC;;;AAGD;EACC;;;AAGD;EACC;;;AAGD;EACC;;;AAGD;AAAA;EAEC;EACA;;;AAGD;EACC;EACA;;;AAGD;EACE;EACA;;;AC5DF;ECDE;EACA;EDEA;EACA;EACA;EACA;EACA;;;AAGF;ECVE;EACA;EDWA;;;AAGF;EACE;;;AEZF;EACE,aCNU;;;ADSZ;EACE;EDJA;EACA;ECKA;EACA;EACA","file":"App.css"}

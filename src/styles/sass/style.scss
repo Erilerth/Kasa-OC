@@ -1,6 +1,16 @@
 @use 'base/base.scss';
 @use 'sass-utils/sass-utils.scss' as s;
+@use 'pages/pages.scss' as p;
+@use 'components/components.scss' as c;
 
 body {
   font-family: s.$main-font;
+}
+
+#root {
+  max-width: 1240px;
+  @include s.flex_column;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 0 20px;
 }

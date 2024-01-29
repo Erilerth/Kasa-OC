@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "sourceRoot": "",
+  "sources": [
+    "sass/base/_reset.scss",
+    "sass/style.scss",
+    "sass/sass-utils/_variables.scss"
+  ],
+  "names": [],
+  "mappings": "AAAA;AAAA;AAAA;AAAA;AAKA;EACE;EACA;;;AAGF;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;EAaC;EACA;EACA;EACA;EACA;EACA;;;AAGD;AACA;AAAA;EAEC;;;AAGD;EACC;;;AAGD;EACC;;;AAGD;EACC;;;AAGD;AAAA;EAEC;EACA;;;AAGD;EACC;EACA;;;AAGD;EACE;EACA;;;AC3DF;EACE,aCJU",
+  "file": "App.css"
+}

@@ -1,0 +1,6 @@
+@use 'base/base.scss';
+@use 'sass-utils/sass-utils.scss' as s;
+
+body {
+  font-family: s.$main-font;
+}

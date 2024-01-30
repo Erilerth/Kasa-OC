@@ -2,14 +2,16 @@
 @use 'sass-utils/sass-utils.scss' as s;
 @use 'pages/pages.scss' as p;
 @use 'components/components.scss' as c;
+@use 'layout/layout.scss' as l;
 
 body {
   font-family: s.$main-font;
+  @include s.flex_column;
+  align-items: center;
+  flex-wrap: nowrap;
 }
 
 #root {
   max-width: 1240px;
-  @include s.flex_column;
-  align-items: center;
-  flex-wrap: nowrap;
+  width: 100%;
 }

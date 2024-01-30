@@ -3,7 +3,7 @@ import logo from '../../imgs/LOGO-mob.svg';
 
 export default function Header() {
   return (
-    <header>
+    <header className='container'>
       <Link to='/'>
         <img src={logo} alt='Kasa Logo' />
       </Link>

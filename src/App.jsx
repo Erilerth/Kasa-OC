@@ -10,7 +10,7 @@ function App() {
     <Router>
       <Routes>
         <Route exact path='/' element={<Home />} />
-        <Route path='/logement' element={<FicheLogement />} />
+        <Route path='/logement/:id' element={<FicheLogement />} />
         <Route path='/a-propos' element={<APropos />} />
         <Route path='*' element={<Page404 />} />
       </Routes>

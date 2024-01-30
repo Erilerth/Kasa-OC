@@ -62,28 +62,29 @@ a {
   text-decoration: none;
 }
 
-header {
+.bgImg {
+  background-image: url("../../../imgs/bannerHome.png");
+  height: 111px;
+  background-size: cover;
+}
+
+.container {
   padding: 0 20px;
-}
-
-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 20px;
   margin-bottom: 27px;
-  width: 100%;
 }
 
-ul {
+.card {
+  width: 335px;
+  height: 255px;
+  border-radius: 10px;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%), url("../../../imgs/banner-bg.jpg");
   display: flex;
-  flex-direction: row;
-  gap: 1.5rem;
+  flex-direction: column;
+  justify-content: flex-end;
 }
-
-li {
-  font-size: 12px;
+.card h2 {
+  color: white;
+  margin: 15px 20px;
 }
 
 footer {
@@ -104,16 +105,37 @@ footer p {
   width: 130px;
 }
 
-body {
-  font-family: "Montserrat", sans-serif;
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
 }
 
-#root {
-  max-width: 1240px;
+ul {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+
+li {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   flex-wrap: nowrap;
+}
+
+#root {
+  max-width: 1240px;
+  width: 100%;
 }
 
 /*# sourceMappingURL=App.css.map */

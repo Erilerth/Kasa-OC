@@ -2,4 +2,22 @@
   background-image: url('../../../imgs/bannerHome.png');
   height: 111px;
   background-size: cover;
+  max-width: 1420px;
+  width: 100%;
+}
+
+.logementsCard {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  .logementsCards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 1420px;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
 }

@@ -66,18 +66,35 @@ a {
   background-image: url("../../../imgs/bannerHome.png");
   height: 111px;
   background-size: cover;
+  max-width: 1420px;
+  width: 100%;
+}
+
+.logementsCard {
+  display: flex;
+  flex-direction: column;
+}
+
+main .logementsCards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 1420px;
+  flex-wrap: wrap;
+  gap: 50px;
 }
 
 .container {
   padding: 0 20px;
   margin-bottom: 27px;
+  width: 100%;
 }
 
 .card {
   width: 335px;
   height: 255px;
   border-radius: 10px;
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%), url("../../../imgs/banner-bg.jpg");
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.2) 99.99%, rgba(0, 0, 0, 0.5) 100%), url("../../../imgs/banner-bg.jpg");
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -123,6 +140,10 @@ ul {
 li {
   font-size: 12px;
   font-weight: 500;
+}
+
+.underline {
+  text-decoration-line: underline;
 }
 
 body {

@@ -4,7 +4,7 @@ import Logements from '../data/logements.json';
 
 const LogementContext = createContext();
 
-export const LogementProvider = ({ children }) => {
+export function LogementProvider({ children }) {
   const [logement] = useState(Logements);
 
   return (
@@ -12,7 +12,7 @@ export const LogementProvider = ({ children }) => {
       {children}
     </LogementContext.Provider>
   );
-};
+}
 
 LogementProvider.propTypes = {
   children: PropTypes.node.isRequired,

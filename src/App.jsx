@@ -11,8 +11,11 @@ function App() {
     <LogementProvider>
       <Router>
         <Routes>
-          <Route exact path='/' element={<Home />} />
-          <Route path='/logement/:id' element={<FicheLogement />} />
+          <Route exact path='/' element={<Home activeA={true} />} />
+          <Route
+            path='/logement/:id'
+            element={<FicheLogement activeH={true} />}
+          />
           <Route path='/a-propos' element={<APropos />} />
           <Route path='*' element={<Page404 />} />
         </Routes>

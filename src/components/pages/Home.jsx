@@ -1,6 +1,6 @@
 import Header from '../shared/Header';
 import Footer from '../shared/Footer';
-// import Banner from '../Banner';
+import Banner from '../Banner';
 import LogementsCards from '../LogementsCards';
 
 export default function Home() {
@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <Header />
       <main className='container'>
-        {/* <Banner /> */}
+        <Banner />
         <LogementsCards />
       </main>
       <Footer />

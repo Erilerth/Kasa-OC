@@ -1,7 +1,15 @@
+import { useContext } from 'react';
 import Card from './shared/Card';
-
-const titleCard = 'Hello World';
+import LogementContext from '../context/LogementContext';
 
 export default function LogementsCards() {
-  return <Card title={titleCard} />;
+  const [logement] = useContext(LogementContext);
+
+  return (
+    <section className='logementsCards'>
+      {logement.map((logement) => (
+        <Card key={logement.id} title={logement.title} />
+      ))}
+    </section>
+  );
 }

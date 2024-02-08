@@ -1,0 +1,22 @@
+@use '../../utils/styles/utils.scss' as *;
+
+header {
+  @include flex_row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px !important;
+}
+
+ul {
+  @include flex_row;
+  gap: 1.5rem;
+
+  li {
+    font-size: 12px;
+    font-weight: $header-font-weight;
+  }
+}
+
+.underline {
+  text-decoration-line: underline;
+}

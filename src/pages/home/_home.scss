@@ -1,0 +1,17 @@
+@use '../../utils/styles/utils.scss' as *;
+
+.logementsCard {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  .logementsCards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 1420px;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+}

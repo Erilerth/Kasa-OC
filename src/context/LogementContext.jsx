@@ -15,7 +15,7 @@ export function LogementProvider({ children }) {
 }
 
 LogementProvider.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
 };
 
 export default LogementContext;

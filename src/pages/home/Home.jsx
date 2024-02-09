@@ -7,13 +7,12 @@ import './_home.scss';
 
 export default function Home() {
   const [logement] = useContext(LogementContext);
-  console.log(logement);
 
   return (
     <>
       <main className='container'>
         <Banner />
-        <section className='logementsCards'>
+        <section id='logementsCards'>
           {logement.map((logement) => (
             <Link to={`/logement/${logement.id}`} key={logement.id}>
               <Card>

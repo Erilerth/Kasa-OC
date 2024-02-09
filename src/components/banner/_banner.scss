@@ -1,11 +1,19 @@
 @use '../../utils/styles/utils.scss' as *;
 
 .bgImg {
+  @include flex_row;
   height: 111px;
   margin-bottom: 22px;
   position: relative;
   background: black;
   border-radius: $rounded-10;
+  z-index: -2;
+
+  @include respond-to('laptop') {
+    height: 223px;
+    border-radius: $rounded-25;
+    margin-bottom: 43px;
+  }
 
   img {
     width: 100%;
@@ -13,14 +21,25 @@
     object-fit: cover;
     border-radius: $rounded-10;
     opacity: 0.6;
+    position: absolute;
+    z-index: -1;
+
+    @include respond-to('laptop') {
+      border-radius: $rounded-25;
+    }
   }
 
   h2 {
     font-size: 24px;
     font-weight: 700;
-    position: absolute;
-    bottom: 32px;
-    left: 16px;
     color: white;
+    z-index: 0;
+    align-self: center;
+    margin: 0 16px;
+
+    @include respond-to('laptop') {
+      font-size: 48px;
+      margin: 0 auto;
+    }
   }
 }

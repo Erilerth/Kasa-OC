@@ -9,16 +9,18 @@ export default function Banner() {
   let text = 'partout et ailleurs';
   text = text.replace(/ /g, '\u00A0');
 
-  const bannerImg = () => {
-    if (location === '/') return <img src={bannerHome} alt='Banner Home' />;
-    if (location === '/a-propos')
-      return <img src={bannerBg} alt='Banner Home' />;
-  };
+  function bannerImg() {
+    if (location === '/')
+      return (
+        <>
+          <img src={bannerHome} alt='Banner Home' />
+          <h2>Chez vous, {text}</h2>
+        </>
+      );
 
-  return (
-    <div className='bgImg'>
-      {bannerImg()}
-      <h2>Chez vous, {text}</h2>
-    </div>
-  );
+    if (location === '/a-propos')
+      return <img src={bannerBg} alt='Banner About' />;
+  }
+
+  return <div className='bgImg'>{bannerImg()}</div>;
 }

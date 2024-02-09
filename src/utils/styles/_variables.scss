@@ -4,3 +4,12 @@ $header-font-weight: 500;
 $rounded-5: 5px;
 $rounded-10: 10px;
 $rounded-25: 25px;
+
+/**** Colors ****/
+$gallery-bg: #f7f7f7;
+
+/**** Breakpoints ****/
+$breakpoints: (
+  'laptop': 1024px,
+  'laptop-l': 1440px,
+) !default;

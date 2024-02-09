@@ -1,11 +1,14 @@
-import Banner from '../../components/banner/Banner';
+import Banner from '../../components/Banner/Banner';
+import Collapsible from '../../components/Collapsible/Collapsible';
 
 function APropos() {
   return (
-    <>
+    <main className='container'>
       <Banner />
-      <p>A-Propos</p>
-    </>
+      <section id='collapsible'>
+        <Collapsible />
+      </section>
+    </main>
   );
 }
 

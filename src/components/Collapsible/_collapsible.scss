@@ -1,0 +1,27 @@
+@use '../../utils/styles/utils.scss' as *;
+
+#collapsible {
+  button {
+    cursor: pointer;
+    font-family: $main-font;
+    @include flex_row;
+    align-items: center;
+    justify-content: space-between;
+    background: $main-color;
+    border: none;
+    border-radius: $rounded-5;
+    width: 100%;
+    padding: 0 10px;
+    height: 30px;
+    font-size: 13px;
+    font-weight: $title-font-weight;
+    color: white;
+  }
+
+  .collapse-content {
+    background: $gallery-bg;
+    font-size: 12px;
+    padding: 20px;
+    border-radius: $rounded-5;
+  }
+}

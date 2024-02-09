@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
-import Banner from '../../components/banner/Banner';
+import Banner from '../../components/Banner/Banner';
 import Card from '../../components/Card/Card';
 import LogementContext from '../../context/LogementContext';
 import './_home.scss';

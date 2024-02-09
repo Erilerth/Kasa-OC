@@ -1,6 +1,9 @@
 @use '../../utils/styles/utils.scss' as *;
 
-#collapsible {
+.collapsible {
+  div {
+    margin-bottom: 20px;
+  }
   button {
     cursor: pointer;
     font-family: $main-font;
@@ -16,6 +19,11 @@
     font-size: 13px;
     font-weight: $title-font-weight;
     color: white;
+
+    @include respond-to('laptop') {
+      font-size: 24px;
+      height: 52px;
+    }
   }
 
   .collapse-content {
@@ -23,5 +31,9 @@
     font-size: 12px;
     padding: 20px;
     border-radius: $rounded-5;
+
+    @include respond-to('laptop') {
+      font-size: 18px;
+    }
   }
 }

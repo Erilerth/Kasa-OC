@@ -1,7 +1,8 @@
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 import './_collapsible.scss';
 
-export default function Collapsible() {
+export default function Collapsible(props) {
   const [open, setOpen] = useState(false);
 
   function toggle() {
@@ -11,9 +12,14 @@ export default function Collapsible() {
   return (
     <div>
       <button onClick={toggle}>
-        toggle <i className='fa-solid fa-angle-up'></i>
+        {props.label} <i className='fa-solid fa-angle-up'></i>
       </button>
-      {open && <div className='collapse-content'>content</div>}
+      {open && <div className='collapse-content'>{props.children}</div>}
     </div>
   );
 }
+
+Collapsible.propTypes = {
+  label: PropTypes.string.isRequired,
+  children: PropTypes.node,
+};

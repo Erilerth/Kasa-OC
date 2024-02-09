@@ -21,7 +21,12 @@ header {
   ul {
     @include flex_row;
     gap: 1.5rem;
+
     @include respond-to('laptop') {
+      gap: 2rem;
+    }
+
+    @include respond-to('laptop-l') {
       gap: 60px;
     }
 
@@ -29,6 +34,10 @@ header {
       font-size: 12px;
       font-weight: $header-font-weight;
       @include respond-to('laptop') {
+        font-size: 18px;
+      }
+
+      @include respond-to('laptop-l') {
         font-size: 24px;
       }
     }

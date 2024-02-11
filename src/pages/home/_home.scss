@@ -14,7 +14,6 @@ main {
     flex-wrap: wrap;
     gap: 50px;
     position: relative;
-    z-index: -2;
     margin-bottom: 27px;
 
     @include respond-to('laptop') {
@@ -30,13 +29,12 @@ main {
         height: 100%;
         object-fit: cover;
         border-radius: 10px;
-        z-index: -1;
-        position: absolute;
       }
 
       h2 {
         font-size: 18px;
         font-weight: 700;
+        position: absolute;
       }
     }
   }

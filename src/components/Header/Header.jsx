@@ -5,6 +5,14 @@ import './_header.scss';
 export default function Header() {
   const location = useLocation().pathname;
 
+  function underlineIfActivePath(targetPath) {
+    if (location === targetPath) {
+      return 'underline';
+    } else {
+      return null;
+    }
+  }
+
   return (
     <header className='container'>
       <Link to='/'>
@@ -13,12 +21,10 @@ export default function Header() {
       <nav>
         <ul>
           <Link to='/'>
-            <li className={location === '/' ? 'underline' : null}>ACCUEIL</li>
+            <li className={underlineIfActivePath('/')}>ACCUEIL</li>
           </Link>
           <Link to='/a-propos'>
-            <li className={location === '/a-propos' ? 'underline' : null}>
-              A PROPOS
-            </li>
+            <li className={underlineIfActivePath('/a-propos')}>A PROPOS</li>
           </Link>
         </ul>
       </nav>

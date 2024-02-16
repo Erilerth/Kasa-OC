@@ -33,6 +33,9 @@ export default function FicheLogement() {
             src={currentPictures[currentImageIndex]}
             alt={`Slide ${currentImageIndex}`}
           />
+          <p className='picture-count'>
+            {currentImageIndex + 1}/{currentPictures.length}
+          </p>
           <button
             onClick={nextImage}
             className='fa-solid fa-angle-right'></button>

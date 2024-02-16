@@ -4,6 +4,7 @@
   #carousel {
     @include flex_row;
     position: relative;
+    justify-content: center;
 
     img {
       width: 100%;
@@ -17,7 +18,20 @@
       background: none;
     }
 
+    .picture-count {
+      display: none;
+      @include respond-to('laptop') {
+        display: block;
+        font-size: 18px;
+        color: white;
+        position: absolute;
+        align-self: flex-end;
+        margin-bottom: 25px;
+      }
+    }
+
     .fa-solid {
+      cursor: pointer;
       font-size: 20px;
       color: white;
       position: absolute;

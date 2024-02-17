@@ -36,6 +36,10 @@
       color: white;
       position: absolute;
       align-self: center;
+
+      @include respond-to('laptop') {
+        font-size: 79px;
+      }
     }
 
     .fa-angle-right {
@@ -47,25 +51,49 @@
     }
   }
 
+  .infos {
+    @include respond-to('laptop') {
+      @include flex_row;
+      justify-content: space-between;
+    }
+  }
+
   #logement-infos {
     margin-top: 15px;
+
+    @include respond-to('laptop') {
+      margin-top: 30px;
+    }
 
     h2 {
       font-size: 18px;
       color: $main-color;
       font-weight: 500;
+
+      @include respond-to('laptop') {
+        font-size: 36px;
+        max-width: 700px;
+      }
     }
 
     h3 {
       font-size: 14px;
       font-weight: 500;
       margin-top: 10px;
+
+      @include respond-to('laptop') {
+        font-size: 18px;
+      }
     }
 
     #logement-tags {
       @include flex_row;
       gap: 10px;
       margin-top: 10px;
+
+      @include respond-to('laptop') {
+        margin-top: 20px;
+      }
 
       p {
         @include flex_row;
@@ -80,16 +108,65 @@
         font-weight: 700;
         width: fit-content;
         padding: 0 10px;
+
+        @include respond-to('laptop') {
+          min-width: 115px;
+          height: 25px;
+          font-size: 14px;
+        }
       }
     }
   }
 
   #rating-host {
+    @include flex_row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+
+    @include respond-to('laptop') {
+      @include flex_column;
+      flex-direction: column-reverse;
+      align-items: flex-end;
+      margin-top: 25px;
+      padding-bottom: 13px;
+    }
+
+    #rating {
+      .fa-star {
+        font-size: 13px;
+        margin-right: 6.5px;
+
+        @include respond-to('laptop') {
+          font-size: 24px;
+          margin-top: 27px;
+          margin-right: 15px;
+        }
+      }
+
+      .fa-solid.fa-star.active {
+        color: $main-color;
+      }
+
+      .fa-solid.fa-star.inactive {
+        color: #e3e3e3;
+      }
+    }
+
     #host {
+      @include flex_row;
+      align-items: center;
+      gap: 10px;
+
       p {
         font-size: 12px;
         font-weight: 500;
         color: $main-color;
+
+        @include respond-to('laptop') {
+          font-size: 18px;
+          margin-bottom: 5px;
+        }
       }
 
       img {
@@ -97,6 +174,34 @@
         height: 32px;
         object-fit: cover;
         border-radius: 50%;
+
+        @include respond-to('laptop') {
+          width: 64px;
+          height: 64px;
+        }
+      }
+    }
+  }
+
+  #logement-description {
+    margin-top: 13px;
+
+    @include respond-to('laptop') {
+      @include flex_row;
+      justify-content: space-between;
+      gap: 76px;
+      margin-top: 24px;
+    }
+
+    div {
+      width: 100%;
+    }
+
+    button {
+      font-size: 18px;
+
+      i {
+        font-size: 32px;
       }
     }
   }

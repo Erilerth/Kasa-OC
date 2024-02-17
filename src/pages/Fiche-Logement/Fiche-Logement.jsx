@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import LogementData from '../../data/logements.json';
+import Collapsible from '../../components/Collapsible/Collapsible';
 import './_fiche-logement.scss';
 
 export default function FicheLogement() {
@@ -8,6 +9,8 @@ export default function FicheLogement() {
   const currentLogement = LogementData.find((logement) => logement.id === id);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const currentPictures = currentLogement.pictures;
+
+  const [firstName, lastName] = currentLogement.host.name.split(' ');
 
   function nextImage() {
     setCurrentImageIndex(
@@ -55,15 +58,43 @@ export default function FicheLogement() {
       </section>
 
       <section id='rating-host'>
+        <div id='rating'>
+          {[...Array(5)].map((_, index) => {
+            return (
+              <span
+                key={index}
+                className={`fa-solid fa-star ${
+                  index < Number(currentLogement.rating) ? 'active' : 'inactive'
+                }`}></span>
+            );
+          })}
+        </div>
         <div id='host'>
-          <p>{currentLogement.host.name}</p>
+          <div>
+            <p>{firstName}</p>
+            <p>{lastName}</p>
+          </div>
           <img
             src={currentLogement.host.picture}
             alt={`Image de ${currentLogement.host.name}`}
           />
         </div>
       </section>
-      <section id='logement-description'></section>
+
+      <section id='logement-description' className='collapsible'>
+        <Collapsible
+          label='Description'
+          CollapsibleContent={currentLogement.description}
+        />
+        <Collapsible
+          label='Équipements'
+          CollapsibleContent={currentLogement.equipments.map(
+            (equipment, index) => (
+              <p key={index}>{equipment}</p>
+            )
+          )}
+        />
+      </section>
     </main>
   );
 }

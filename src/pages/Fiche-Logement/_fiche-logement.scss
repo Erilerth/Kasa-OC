@@ -191,17 +191,21 @@
       justify-content: space-between;
       gap: 76px;
       margin-top: 24px;
-    }
 
-    div {
-      width: 100%;
-    }
+      div {
+        width: 100%;
+      }
 
-    button {
-      font-size: 18px;
+      p {
+        @include flex_column;
+      }
 
-      i {
-        font-size: 32px;
+      button {
+        font-size: 18px;
+
+        i {
+          font-size: 32px;
+        }
       }
     }
   }

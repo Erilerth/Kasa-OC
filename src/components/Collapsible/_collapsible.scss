@@ -1,7 +1,7 @@
 @use '../../utils/styles/utils.scss' as *;
 
 .collapsible {
-  div {
+  .collapse {
     margin-bottom: 20px;
   }
   button {
@@ -26,14 +26,40 @@
     }
   }
 
+  .collapse-anim {
+    overflow: hidden;
+  }
+
+  .slide {
+    transition: max-height $transition-collapsible;
+    max-height: 0;
+    overflow: hidden;
+  }
+
   .collapse-content {
     background: $gallery-bg;
     font-size: 12px;
     padding: 20px;
     border-radius: $rounded-5;
+    transition: transform $transition-collapsible ease-in-out;
+    transform: translateY(-100%);
 
     @include respond-to('laptop') {
       font-size: 18px;
     }
+  }
+
+  .collapse-content.open {
+    display: block;
+    height: auto;
+    transform: translateY(0);
+  }
+
+  .rotate {
+    transform: rotate(180deg);
+  }
+
+  .fa-solid {
+    transition: transform $transition-collapsible;
   }
 }

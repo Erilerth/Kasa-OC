@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Navigate } from 'react-router-dom';
 import LogementData from '../../data/logements.json';
 import Collapsible from '../../components/Collapsible/Collapsible';
 import './_fiche-logement.scss';
@@ -8,8 +8,12 @@ export default function FicheLogement() {
   const { id } = useParams();
   const currentLogement = LogementData.find((logement) => logement.id === id);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const currentPictures = currentLogement.pictures;
 
+  if (currentLogement === undefined) {
+    return <Navigate to='/404' />;
+  }
+
+  const currentPictures = currentLogement.pictures;
   const [firstName, lastName] = currentLogement.host.name.split(' ');
 
   function nextImage() {
@@ -94,7 +98,7 @@ export default function FicheLogement() {
           label='Équipements'
           CollapsibleContent={currentLogement.equipments.map(
             (equipment, index) => (
-              <p key={index}>{equipment}</p>
+              <span key={index}>{equipment}</span>
             )
           )}
         />

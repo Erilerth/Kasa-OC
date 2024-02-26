@@ -10,20 +10,24 @@ export default function Collapsible({ label, CollapsibleContent }) {
   }
 
   return (
-    <div>
+    <div className='collapse'>
       <button onClick={toggle}>
-        {label} <i className='fa-solid fa-angle-up'></i>
+        {label}{' '}
+        <i className={`fa-solid fa-angle-up ${open ? 'rotate' : null}`}></i>
       </button>
-      {open && (
-        <div className='collapse-content'>
+      {/* {open && ( */}
+      <div className={`collapse-anim ${open ? 'open' : 'slide'}`}>
+        <div className={`collapse-content ${open ? 'open' : null}`}>
           <p>{CollapsibleContent}</p>
         </div>
-      )}
+      </div>
+      {/* )} */}
     </div>
   );
 }
 
 Collapsible.propTypes = {
   label: PropTypes.string.isRequired,
-  CollapsibleContent: PropTypes.string.isRequired,
+  CollapsibleContent: PropTypes.oneOfType([PropTypes.string, PropTypes.array])
+    .isRequired,
 };

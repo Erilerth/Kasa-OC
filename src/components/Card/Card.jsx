@@ -15,5 +15,5 @@ export default function Card({ cardImg, cardTitle, cardId }) {
 Card.propTypes = {
   cardImg: PropTypes.string.isRequired,
   cardTitle: PropTypes.string.isRequired,
-  cardId: PropTypes.number.isRequired,
+  cardId: PropTypes.string.isRequired,
 };

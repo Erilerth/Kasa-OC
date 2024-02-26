@@ -13,6 +13,7 @@ header {
   }
 
   img {
+    width: 140px;
     @include respond-to('laptop') {
       width: 210px;
     }
@@ -33,8 +34,10 @@ header {
     li {
       font-size: 12px;
       font-weight: $header-font-weight;
+      text-transform: uppercase;
       @include respond-to('laptop') {
         font-size: 18px;
+        text-transform: capitalize;
       }
 
       @include respond-to('laptop-l') {

@@ -21,10 +21,10 @@ export default function Header() {
       <nav>
         <ul>
           <Link to='/'>
-            <li className={underlineIfActivePath('/')}>ACCUEIL</li>
+            <li className={underlineIfActivePath('/')}>acceuil</li>
           </Link>
           <Link to='/a-propos'>
-            <li className={underlineIfActivePath('/a-propos')}>A PROPOS</li>
+            <li className={underlineIfActivePath('/a-propos')}>a propos</li>
           </Link>
         </ul>
       </nav>

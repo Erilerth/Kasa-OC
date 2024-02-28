@@ -1,0 +1,46 @@
+@use '../../utils/styles/utils.scss' as *;
+
+.bgImg {
+  @include flex_row;
+  height: 111px;
+  margin-bottom: 22px;
+  position: relative;
+  background: black;
+  border-radius: $rounded-10;
+  z-index: -2;
+  width: 100%;
+
+  @include respond-to('laptop') {
+    height: 223px;
+    border-radius: $rounded-25;
+    margin-bottom: 43px;
+    justify-content: center;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+    border-radius: $rounded-10;
+    z-index: -1;
+
+    @include respond-to('laptop') {
+      border-radius: $rounded-25;
+    }
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    z-index: 0;
+    align-self: center;
+    margin: 0 16px;
+    position: absolute;
+
+    @include respond-to('laptop') {
+      font-size: 48px;
+    }
+  }
+}

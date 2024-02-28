@@ -1,0 +1,28 @@
+@use './utils.scss' as *;
+
+body {
+  font-family: $main-font !important;
+  @include flex_column;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+#root {
+  max-width: 1240px;
+  width: 100%;
+  @include flex_column;
+  align-items: center;
+}
+
+.container {
+  padding: 0 20px;
+  width: 100%;
+
+  @include respond-to('laptop-l') {
+    padding: 0;
+  }
+}
+
+.hide {
+  display: none;
+}

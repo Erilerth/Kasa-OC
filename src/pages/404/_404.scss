@@ -1,0 +1,38 @@
+@use '../../utils/styles/utils.scss' as *;
+#error-page {
+  color: $main-color;
+  padding: 0 10%;
+  margin-bottom: 113px;
+
+  @include flex_column;
+  align-items: center;
+  gap: 113px;
+
+  h1 {
+    font-size: 96px;
+    font-weight: $title-font-weight;
+    margin-top: 113px;
+
+    @include respond-to('laptop') {
+      font-size: 288px;
+    }
+  }
+
+  h2 {
+    text-align: center;
+
+    @include respond-to('laptop') {
+      font-size: 36px;
+    }
+  }
+
+  a {
+    color: black;
+    text-decoration-line: underline;
+    font-size: 14px;
+
+    @include respond-to('laptop') {
+      font-size: 18px;
+    }
+  }
+}

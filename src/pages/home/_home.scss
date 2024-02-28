@@ -1,0 +1,41 @@
+@use '../../utils/styles/utils.scss' as *;
+
+.logementsCard {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  #logementsCards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 1420px;
+    flex-wrap: wrap;
+    gap: 50px;
+    position: relative;
+    margin-bottom: 27px;
+
+    @include respond-to('laptop') {
+      padding: 56px 50px 43px 50px;
+      background: $gallery-bg;
+      border-radius: $rounded-25;
+      margin-bottom: 50px;
+    }
+
+    .card {
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+
+      h2 {
+        font-size: 18px;
+        font-weight: 700;
+        position: absolute;
+      }
+    }
+  }
+}

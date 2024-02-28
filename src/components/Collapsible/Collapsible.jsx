@@ -12,12 +12,11 @@ export default function Collapsible({ label, CollapsibleContent }) {
   return (
     <div className='collapse'>
       <button onClick={toggle}>
-        {label}{' '}
-        <i className={`fa-solid fa-angle-up ${open ? 'rotate' : null}`}></i>
+        {label} <i className={`fa-solid fa-angle-up ${open && 'rotate'}`}></i>
       </button>
       {/* {open && ( */}
       <div className={`collapse-anim ${open ? 'open' : 'slide'}`}>
-        <div className={`collapse-content ${open ? 'open' : null}`}>
+        <div className={`collapse-content ${open && 'open'}`}>
           <p>{CollapsibleContent}</p>
         </div>
       </div>

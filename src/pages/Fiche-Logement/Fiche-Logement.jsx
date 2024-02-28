@@ -1,53 +1,23 @@
-import { useState } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import LogementData from '../../data/logements.json';
 import Collapsible from '../../components/Collapsible/Collapsible';
 import './_fiche-logement.scss';
+import Caroussel from '../../components/Caroussel/Caroussel';
 
 export default function FicheLogement() {
   const { id } = useParams();
   const currentLogement = LogementData.find((logement) => logement.id === id);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const currentPictures = currentLogement.pictures;
 
   if (currentLogement === undefined) {
     return <Navigate to='/404' />;
   }
 
-  const currentPictures = currentLogement.pictures;
   const [firstName, lastName] = currentLogement.host.name.split(' ');
-
-  function nextImage() {
-    setCurrentImageIndex(
-      (prevIndex) => (prevIndex + 1) % currentPictures.length
-    );
-  }
-
-  function prevImage() {
-    setCurrentImageIndex(
-      (prevIndex) =>
-        (prevIndex - 1 + currentPictures.length) % currentPictures.length
-    );
-  }
 
   return (
     <main id='fiche-logement' className='container'>
-      {currentPictures.length > 0 && (
-        <div id='carousel'>
-          <button
-            onClick={prevImage}
-            className='fa-solid fa-angle-left'></button>
-          <img
-            src={currentPictures[currentImageIndex]}
-            alt={`Slide ${currentImageIndex}`}
-          />
-          <p className='picture-count'>
-            {currentImageIndex + 1}/{currentPictures.length}
-          </p>
-          <button
-            onClick={nextImage}
-            className='fa-solid fa-angle-right'></button>
-        </div>
-      )}
+      <Caroussel currentPictures={currentPictures} />
 
       <div className='infos'>
         <section id='logement-infos'>

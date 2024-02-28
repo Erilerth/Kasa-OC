@@ -2,26 +2,15 @@ import './_banner.scss';
 import PropTypes from 'prop-types';
 
 export default function Banner({ bannerImage, bannerText }) {
-  function renderBannerText() {
-    if (bannerText !== '') {
-      return <h2>{bannerText}</h2>;
-    }
-    return null;
-  }
-
   return (
     <div className='bgImg'>
       <img src={bannerImage} alt='Banner Home' />
-      {renderBannerText()}
+      {bannerText && <h2>{bannerText}</h2>}
     </div>
   );
 }
 
 Banner.propTypes = {
-  bannerImage: PropTypes.string,
+  bannerImage: PropTypes.string.isRequired,
   bannerText: PropTypes.string,
-};
-
-Banner.defaultProps = {
-  bannerText: '',
 };

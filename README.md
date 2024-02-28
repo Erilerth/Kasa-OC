@@ -1,4 +1,5 @@
-# TODO
+# Kasa
 
-- [ ] Animation ouverture collapsible
-- [ ] Redirection page erreur en cas d'id invalide
+Projet 8 de openclassroom pour l'apprentissage de React
+
+Projet fait sous React - Vite

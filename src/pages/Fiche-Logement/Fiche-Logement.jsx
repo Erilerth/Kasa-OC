@@ -7,11 +7,9 @@ import Caroussel from '../../components/Caroussel/Caroussel';
 export default function FicheLogement() {
   const { id } = useParams();
   const currentLogement = LogementData.find((logement) => logement.id === id);
-  const currentPictures = currentLogement.pictures;
+  if (currentLogement === undefined) return <Navigate to='/404' />;
 
-  if (currentLogement === undefined) {
-    return <Navigate to='/404' />;
-  }
+  const currentPictures = currentLogement.pictures;
 
   const [firstName, lastName] = currentLogement.host.name.split(' ');
 

@@ -13,10 +13,10 @@ export default function Header() {
       <nav>
         <ul>
           <Link to='/'>
-            <li className={location === '/' ? 'undreline' : null}>acceuil</li>
+            <li className={location === '/' ? 'underline' : null}>acceuil</li>
           </Link>
           <Link to='/a-propos'>
-            <li className={location === '/a-propos' ? 'undreline' : null}>
+            <li className={location === '/a-propos' ? 'underline' : null}>
               a propos
             </li>
           </Link>
